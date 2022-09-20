@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pastel_purple"
+    tools:context=".latihan.RegFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/card_reg"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/register"
+        android:gravity="center_horizontal"
+        android:textSize="42sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_reg"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/regName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="full name"
+                android:hint="@string/full_name"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/regUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regName"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="username"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/regPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regUsername"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="password"
+                android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/regPassValidate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regPassword"
+                android:layout_marginBottom="10dp"
+                android:autofillHints="password"
+                android:hint="@string/repeat_pass"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                tools:ignore="TextContrastCheck" />
+
+
+            <Button
+                android:id="@+id/btn_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/regPassValidate"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/pastel_yellow"
+                android:text="@string/register"
+                android:textColor="#BF360C"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
